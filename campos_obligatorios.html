@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <title>Campos obligatorios CoffeeScript</title>
+  <style type="text/css">
+    .campos{
+      background: #fff;
+      color: #000;
+      border: 1px solid #6e6e6e;
+      height: 20px;
+    }
+
+    .error{
+      background: #ccc;
+      color: #000;
+      border: 3px solid #f00;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <input type="text" onblur="validar(this); longitud(this, 3);" class="campos" required placeholder="Nombre...">
+      <p></p>
+
+    <input type="text" onblur="validar(this)" class="campos" required placeholder="Correo...">
+      <p></p>
+
+    <input type="text" onblur="validar(this); longitud(this, 10);" class="campos" required placeholder="Mensaje...">
+      <p></p>
+
+    <input type="text" onblur="validar_numeros(this)" class="campos" required placeholder="Edad...">
+    <p></p>
+
+    <input type="submit">
+
+  </form>
+</body>
+    <script src="js/campos_obligatorios.js"></script>
+</html>
